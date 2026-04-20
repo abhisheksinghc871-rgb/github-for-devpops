@@ -1,0 +1,16 @@
+ python .\testing.py
+ rm .\testing.py
+ ls
+ git init
+ git status
+ git add .\testing.py
+ git status
+ git commit -m "added testing file"
+ git status
+ git rm .\testing.py
+ git status
+ git restore testing.py
+ git restore --staged testing.py
+ git restore testing.py
+ rm .\testing.py
+ git restore testing.py
