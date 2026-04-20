@@ -1,16 +1,99 @@
- python .\testing.py
- rm .\testing.py
- ls
- git init
- git status
- git add .\testing.py
- git status
- git commit -m "added testing file"
- git status
- git rm .\testing.py
- git status
- git restore testing.py
- git restore --staged testing.py
- git restore testing.py
- rm .\testing.py
- git restore testing.py
+🚀 Git Commands — Systematic Flow (Beginner → Advanced)
+🔹 1. Setup & Check
+👉 Git install hone ke baad basic check
+git --version
+
+🔹 2. Repository Initialize (Local Start)
+git init
+👉 Folder ko Git repository bana deta hai (.git folder create hota hai)
+
+🔹 3. Check Status (Har step pe important)
+git status
+👉 Batata hai:
+Untracked files
+Staged files
+Changes
+
+🔹 4. Add Files (Staging Area)
+git add filename
+git add .
+👉 Meaning:
+git add filename → specific file
+git add . → sab files
+
+🔹 5. Commit (Snapshot Save)
+git commit -m "your message"
+👉 Changes ko permanently repository me save karta hai
+
+🔹 6. File States Flow
+Untracked → git add → Staged → git commit → Tracked
+
+🔥 File Delete & Restore Commands
+🔹 7. File Delete (Git se)
+git rm filename
+👉 File delete + staging me delete add
+
+🔹 8. Restore File (Last Commit se)
+git restore filename
+
+🔹 9. Staging se remove karo
+git restore --staged filename
+
+🔹 10. Full Restore (Advanced)
+git restore --source=HEAD --staged --worktree filename
+
+🌐 Remote Repository (GitHub Connect)
+🔹 11. Remote Add
+git remote add origin <repo-url>
+
+🔹 12. Remote Check
+git remote -v
+
+🔹 13. Branch Rename (Best Practice)
+git branch -M main
+
+🔹 14. Push Code (Local → GitHub)
+git push origin main
+👉 First time:
+git push -u origin main
+
+🔐 Authentication (PAT Use)
+👉 Push ke time:
+Username = GitHub username
+Password = ❌
+PAT = ✅
+
+📥 Clone & Fork
+🔹 15. Clone Repository
+git clone <repo-url>
+👉 GitHub se local machine pe complete copy
+
+🔹 16. Folder me jana
+cd repo-name
+
+🔄 Complete Real Workflow (DevOps Flow)
+git init
+git status
+git add .
+git commit -m "initial commit"
+git remote add origin <url>
+git branch -M main
+git push -u origin main
+
+🔥 Delete & Restore Flow (Real Case)
+git rm testing.py
+git status
+
+git restore --staged testing.py
+git restore testing.py
+
+🧠 Core Concept (Most Important)
+Working Directory → Staging Area → Repository → GitHub
+
+⚡ Golden Rules (Interview Ready)
+✔️ git add → staging
+ ✔️ git commit → save snapshot
+ ✔️ git push → upload
+ ✔️ git rm → delete + stage
+ ✔️ git restore → recover
+
